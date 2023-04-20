@@ -1,0 +1,52 @@
+.nav-container{
+    background-color: #212f3d;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 800;
+    width: 100%;
+    
+}
+
+.nav-logo{
+    font-size: 3.3rem;
+}
+.nav-container ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav-container a{
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .10rem;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.nav-container li.active{
+    background-color: #555;
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+.nav-container li:hover{
+    background-color: #777;
+    border-radius: 5px;
+    
+}
+
+.ico_navbar{
+    margin: 3px;
+}
