@@ -50,3 +50,10 @@
 .ico_navbar{
     margin: 3px;
 }
+
+.ico-cart{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22px;
+    margin-left: 45rem;
+}

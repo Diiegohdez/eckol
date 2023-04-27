@@ -1,7 +1,7 @@
 import React from 'react';
 import "./navbar.css";
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
-import { RiHome2Fill, RiContactsBookFill } from 'react-icons/ri';
+import { RiHome2Fill, RiContactsBookFill, RiShoppingCartFill } from 'react-icons/ri';
 import { IoLogoGameControllerB } from 'react-icons/io';
 
 
@@ -17,6 +17,9 @@ const Navbar = () => {
                 
                 <CustomLink to="/Contacto"><a><RiContactsBookFill className='ico_navbar'/> Contacto</a></CustomLink>
             </ul>
+            <div >
+                < RiShoppingCartFill aria-hidden="true" className='ico-cart' />
+            </div>
         </div>
     </nav>
   )
