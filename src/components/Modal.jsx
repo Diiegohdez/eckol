@@ -1,9 +1,13 @@
-import React from 'react';
 import './modal.css';
 import { RiSteamFill,RiCheckboxFill, RiKey2Fill } from "react-icons/ri";
 import {BiWorld} from "react-icons/bi";
+import CartContext from '../context/CartContext';
+import { useContext } from 'react';
 
 export const Modal = ({setOpenModal, item}) => {
+
+    const {addToCart} = useContext(CartContext);
+
   return (
     <div className='modal'>
         <div className='modal-container'>
@@ -28,7 +32,7 @@ export const Modal = ({setOpenModal, item}) => {
                 </div>
             </div>
             <div className='modal-footer'>
-                <button className='btn-cart'>Agregar a Carrito</button>
+                <button className='btn-cart' onClick={()=> addToCart(item)}>Agregar a Carrito</button>
             </div>
         </div>
     </div>

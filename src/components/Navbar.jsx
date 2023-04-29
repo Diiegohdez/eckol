@@ -1,11 +1,15 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import "./navbar.css";
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import { RiHome2Fill, RiContactsBookFill, RiShoppingCartFill } from 'react-icons/ri';
 import { IoLogoGameControllerB } from 'react-icons/io';
+import CartContext from '../context/CartContext';
 
 
 const Navbar = () => {
+
+    const {cartItems, showHideCart} =useContext(CartContext);
+
   return (
     <nav>
         <div className='nav-container'>
@@ -17,8 +21,13 @@ const Navbar = () => {
                 
                 <CustomLink to="/Contacto"><a><RiContactsBookFill className='ico_navbar'/> Contacto</a></CustomLink>
             </ul>
-            <div >
-                < RiShoppingCartFill aria-hidden="true" className='ico-cart' />
+            <div className='ico-cart'>
+                < RiShoppingCartFill aria-hidden="true"  onClick={showHideCart} />
+                {cartItems.length > 0 && (
+                    <div className='item-count'>
+                        <span>{cartItems.length}</span>
+                    </div>
+                )}
             </div>
         </div>
     </nav>

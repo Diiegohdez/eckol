@@ -20,7 +20,7 @@ const CartState = ({children}) =>{
         dispatch({type: SHOW_HIDE_CART});
     };
 
-    const remveItem = (id) =>{
+    const removeItem = (id) =>{
         dispatch({type: REMOVE_ITEM, payload: id});
     };
 
@@ -30,7 +30,7 @@ const CartState = ({children}) =>{
             cartItems: state.cartItems,
             addToCart,
             showHideCart,
-            remveItem,
+            removeItem,
         }}>{children}</CartContext.Provider>
     );
 };

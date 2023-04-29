@@ -1,0 +1,32 @@
+.cart-container{
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 5px;
+    z-index: 990;
+}
+
+.cart-close{
+    text-align: right;
+    cursor: pointer;
+}
+
+.cart-item{
+    height: max-content;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.cart-total{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-total2{
+    margin-left: 5px;
+}
+
