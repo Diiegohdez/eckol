@@ -3,6 +3,7 @@ import './product.css'
 import { useInform } from '../hooks/useInform';
 import { Modal } from '../components/Modal';
 import { useState } from 'react';
+import formatterPeso from '../components/Formatter';
 
 const Product = () => {
 
@@ -10,18 +11,20 @@ const Product = () => {
   const { Datos } = useInform();
   const [itemProduc, setItemProduc] = useState();
 
+
+
   return (
     <div className='product'>
       {openModal && <Modal item={itemProduc} setOpenModal={setOpenModal}/>}
       <div className='product-container'>
         {Datos.map(item => (
-          <div className='product-item' key={item.id}>
+          <div className='product-item' key={item._id}>
             <img src={item.img} alt='imagen' width='100%' />
             <div className='pruduct-button'>
               <button onClick={()=>{setOpenModal(true);setItemProduc(item)}}>Mostrar mas..</button>
             </div>
             <h3>{item.name}</h3>
-            <p>{item.price}</p>
+            <p> {formatterPeso.format(item.price)}</p>
           </div>
         ))}
       </div>

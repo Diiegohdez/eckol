@@ -1,21 +1,23 @@
 import React, {useContext} from 'react';
 import './cartItems.css';
 import CartContext from '../context/CartContext';
-import formatCurrency from "format-currency";
+import formatterPeso from '../components/Formatter';
+
+
+
 
 const CartItem = ({item}) => {
 
     const {removeItem} = useContext(CartContext);
-    let opts = { format: "%s%v", symbol: "$" };
-
+    
   return (
     <li className='cartItem'>
         <img src={item.img} alt='img'/>
         <div>
             {item.name} 
-            {formatCurrency(`${item.price}`, opts)}
+            {formatterPeso.format(item.price)}
         </div>
-        <button className='cartItem-btn' onClick={()=>removeItem(item.id)}>Remover</button>
+        <button className='cartItem-btn' onClick={()=>removeItem(item._id)}>Remover</button>
     </li>
   );
 };

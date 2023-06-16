@@ -7,10 +7,21 @@
     border: 1px solid gray;
     padding: 5px;
     z-index: 990;
+    width: 250px;
 }
 
 .cart-close{
     text-align: right;
+    cursor: pointer;
+}
+
+.btn-cart-close{
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 500;
     cursor: pointer;
 }
 

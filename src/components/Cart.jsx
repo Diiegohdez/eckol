@@ -1,30 +1,31 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import "./cart.css";
 import CartContext from '../context/CartContext';
 import CartItem from './CartItems';
-import formatCurrency from 'format-currency';
+import formatterPeso from '../components/Formatter';
+
+
 
 const Cart = () => {
 
-  const {showCart, cartItems, showHideCart} = useContext(CartContext);
-  let opts = { format: "%s%v", symbol: "$" };
+  const { showCart, cartItems, showHideCart } = useContext(CartContext);
 
   return (
     <>
       {showCart && (
         <div className='cart-container'>
           <div className='cart-close'>
-            <button onClick={showHideCart} className="btn-cart">
+            <button onClick={showHideCart} className="btn-cart-close">
               x
             </button>
           </div>
           <div className='cart-item'>
             {cartItems.length === 0 ? (
               <h4>El Carrito esta Vacio</h4>
-            ):(
+            ) : (
               <ul>
-                {cartItems.map((item)=>(
-                  <CartItem key={item.id} item={item}/>
+                {cartItems.map((item) => (
+                  <CartItem key={item._id} item={item}/>
                 ))}
               </ul>
             )}
@@ -33,11 +34,11 @@ const Cart = () => {
             <h3>Total</h3>
             <div></div>
             <div className='cart-total2'>
-              {formatCurrency(cartItems.reduce((amount, item)=> item.price + amount, 0), opts)}
+              {formatterPeso.format(cartItems.reduce((amount, item) => amount + item.price * item.quantity, 0))}
             </div>
           </div>
         </div>
-        
+
       )}
     </>
   );

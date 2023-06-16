@@ -38,6 +38,15 @@
     position: relative;
 }
 
+.product-item h3 {
+    text-shadow: 2px 2px 3px black;
+}
+.product-item p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 3px black;
+}
+
 .product-item  .pruduct-button{
     position: absolute;
     top: 1px;
@@ -61,7 +70,7 @@
     margin-bottom: 10px;
 }
 
-.product-item  .pruduct-button button{
+.product-item .pruduct-button button{
     color: white;
     width: 135px;
     height: 55px;

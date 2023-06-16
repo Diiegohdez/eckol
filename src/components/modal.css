@@ -41,12 +41,14 @@
     font-size: 25px;
     color: white;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 3px black;
 }
 
 .body-modal img{
     width: 230px;
     height: 260px;
     border-radius: 5px;
+    box-shadow: 0px 5px 10px rgb(0,0,0,0.50);
 }
 
 .body-modal{
@@ -65,6 +67,11 @@
     margin-left: 25px;
     color: white;
     font-size: 17px;
+    text-shadow: 2px 2px 3px black;
+}
+
+.container-left{
+    text-shadow: 2px 2px 3px black;
 }
 
 .modal-footer{

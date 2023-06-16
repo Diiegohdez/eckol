@@ -9,7 +9,7 @@ export const useInform = () => {
         getDatos();
     },[])
     const getDatos = async () =>{
-        await Api.get('https://apigames-40cc9-default-rtdb.firebaseio.com/Informacion.json')
+        await Api.get('https://storebackend-production-3496.up.railway.app/api/product')
         .then(Response=>{
             setDatos(Response.data);
         }).catch(error=>{
