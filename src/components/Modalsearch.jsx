@@ -1,13 +1,23 @@
 import React,{useState} from 'react';
 import { useInform } from '../hooks/useInform';
+import "./modalsearch.css";
 
-const Modalsearch = () => {
+const Modalsearch = ({setSearchModal, item}) => {
 
   const { Datos } = useInform();
   const [search, setSearch] = useState("");
   
   return (
-    <div>Modalsearch</div>
+    <div className='Searchmodal'>
+      <div className='Searchmodal-container'>
+        <div className='search-btn-close'>
+          <button onClick={()=>{setSearchModal(false);}}>x</button>
+        </div>
+        <div className='searchmodal-title'>
+          <input type='text' placeholder='Buscar por Nombre'/>
+        </div>
+      </div>
+    </div>
   )
 }
 

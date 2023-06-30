@@ -1,14 +1,19 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import "./navbar.css";
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import { RiHome2Fill, RiContactsBookFill, RiShoppingCartFill, RiSearchLine } from 'react-icons/ri';
 import { IoLogoGameControllerB } from 'react-icons/io';
 import CartContext from '../context/CartContext';
+import Modalsearch from './Modalsearch';
 
 
 const Navbar = () => {
-
+    //Context de la app
     const {cartItems, showHideCart} =useContext(CartContext);
+
+    //Modal de la Busqueda
+    const [searchModal, setSearchModal] = useState(false);
+    const [itemSearch, setItemSearch] = useState("");
 
   return (
     <nav>
@@ -24,7 +29,7 @@ const Navbar = () => {
                 <CustomLink to="/Contacto"><a><RiContactsBookFill className='ico_navbar'/> Contacto</a></CustomLink>
             </ul>
             <div className='ico-serach'>
-                <RiSearchLine/>
+                <RiSearchLine onClick={()=>{setSearchModal(true);setItemSearch(item)}}/>
             </div>
             <div className='ico-cart'>
                 < RiShoppingCartFill aria-hidden="true"  onClick={showHideCart} />
@@ -35,6 +40,7 @@ const Navbar = () => {
                 )}
             </div>
         </div>
+        {searchModal && <Modalsearch item={itemSearch} setSearchModal={setSearchModal}/>}
     </nav>
   )
 }
