@@ -1,5 +1,5 @@
 .cartItem{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(126, 210, 244);
     padding: 10px 0;
     margin-top: 10px;
 }
@@ -19,13 +19,15 @@ li img{
 }
 
 .cartItem:nth-child(1) {
-    border-top: 1px solid gray;
+    border-top: 1px solid rgb(126, 210, 244);
 }
 
 .cartItem-btn {
     margin-left: auto;
-    padding: 4px 8px;
+    padding: 4px 20px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    font-size: 15px;
+    background-color: rgb(126, 210, 244);
 }

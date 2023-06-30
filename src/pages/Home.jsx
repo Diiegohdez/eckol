@@ -47,6 +47,8 @@ const Home = () => {
           {newDatos2.map(item => (
             <div key={item._id} className="slider-item">
               <img src={item.banner} alt='img' className="banner-img" onClick={() => { setOpenModal(true); setItemProduc(item) }} />
+              <div className='slider-infor'>
+              </div>
             </div>
           ))}
         </Slider>

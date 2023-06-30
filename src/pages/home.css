@@ -11,7 +11,7 @@
     height: 315px;
     background-color: #304152;
     border-radius: 10px;
-    margin-left: 41px;
+    margin-left: 33px;
     margin-top: 90px;
     box-shadow: 0px 5px 10px rgb(0,0,0,0.50);
     cursor: pointer;
@@ -27,11 +27,26 @@
     border-radius: 10px;
 }
 
+.slider-item .slider-infor{
+    position: absolute;
+    top: 1px;
+    width: 1%;
+    height: 1%;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.slider-item:hover > .slider-infor{
+    opacity: 1;
+    visibility: visible;
+}
+
 .slider2{
     width: 46rem;
     height: 190px;
     background-color: #304152;
-    margin-left: 41px;
+    margin-left: 33px;
     margin-top: 25px;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgb(0,0,0,0.50);
@@ -81,7 +96,7 @@
 }
 
 .slider2-item .slider2-btn {
-    color: white;
+    color: rgb(126, 210, 244); 
     width: 139px;
     height: 160px;
     margin-top: 13px;
@@ -90,6 +105,7 @@
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
+    -webkit-text-stroke: 1px #212f3d;
 }
 
 

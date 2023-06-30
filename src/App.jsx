@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import {Route, Routes} from 'react-router-dom';
 import Product from './pages/Product';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 
 
 
@@ -21,7 +22,7 @@ function App() {
           <Route path='/Productos' element = {<Product/>}/>
           <Route path='/Contacto' element = {<Contact/>}/>
       </Routes>
-      
+      <Footer/>
       
     </>
   )

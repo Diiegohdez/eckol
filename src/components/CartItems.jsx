@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import './cartItems.css';
 import CartContext from '../context/CartContext';
 import formatterPeso from '../components/Formatter';
+import {MdDelete} from "react-icons/md";
 
 
 
@@ -14,10 +15,10 @@ const CartItem = ({item}) => {
     <li className='cartItem'>
         <img src={item.img} alt='img'/>
         <div>
-            {item.name} 
-            {formatterPeso.format(item.price)}
+            <p className='cartitem-name'>{item.name}</p> 
+            <p className='cartitem-price'>{formatterPeso.format(item.price)}</p>
         </div>
-        <button className='cartItem-btn' onClick={()=>removeItem(item._id)}>Remover</button>
+        <button className='cartItem-btn' onClick={()=>removeItem(item._id)}><MdDelete/></button>
     </li>
   );
 };

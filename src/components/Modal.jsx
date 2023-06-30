@@ -1,8 +1,10 @@
 import './modal.css';
 import { RiSteamFill,RiCheckboxFill, RiKey2Fill } from "react-icons/ri";
 import {BiWorld} from "react-icons/bi";
+import {BsFillCartPlusFill} from "react-icons/bs";
 import CartContext from '../context/CartContext';
 import { useContext } from 'react';
+import formatterPeso from './Formatter';
 
 export const Modal = ({setOpenModal, item}) => {
 
@@ -32,7 +34,7 @@ export const Modal = ({setOpenModal, item}) => {
                 </div>
             </div>
             <div className='modal-footer'>
-                <button className='btn-cart' onClick={()=> addToCart(item)}>Agregar a Carrito</button>
+                <button className='btn-cart' onClick={()=> addToCart(item)}>{formatterPeso.format(item.price)} <BsFillCartPlusFill/></button>
             </div>
         </div>
     </div>

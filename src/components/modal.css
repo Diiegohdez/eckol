@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 .modal{
     width: 100vw;
     height: 100vh;
@@ -23,7 +24,6 @@
 .btn-close{
     display: flex;
     justify-content: flex-end;
-    
 }
 
 .btn-close button{
@@ -35,13 +35,15 @@
     font-weight: 600;
     font-size: 17px;
     cursor: pointer;
+    background-color: rgb(126, 210, 244);
 }
 
 .title-modal{
     font-size: 25px;
-    color: white;
+    color: rgb(126, 210, 244);
     margin-bottom: 10px;
     text-shadow: 2px 2px 3px black;
+    font-family: 'Acme', sans-serif;
 }
 
 .body-modal img{
@@ -68,10 +70,12 @@
     color: white;
     font-size: 17px;
     text-shadow: 2px 2px 3px black;
+    font-family: 'Acme', sans-serif;
 }
 
 .container-left{
     text-shadow: 2px 2px 3px black;
+    font-family: 'Acme', sans-serif;
 }
 
 .modal-footer{
@@ -86,5 +90,6 @@
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
-    
+    background-color: rgb(126, 210, 244);
+    cursor: pointer;
 }
