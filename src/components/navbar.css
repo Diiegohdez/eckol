@@ -59,6 +59,7 @@
     display: flex;
     margin-left: 38rem;
     font-size: 19px;
+    cursor: pointer;
 }
 
 .ico-cart{

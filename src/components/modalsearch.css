@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 .Searchmodal{
     width: 100vw;
     height: 100vh;
@@ -35,4 +37,71 @@
     cursor: pointer;
     background-color: rgb(126, 210, 244);
     margin: 15px 15px 0px 0px; 
+}
+
+.searchmodal-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.searchmodal-title input{
+    width: 280px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid rgb(126, 210, 244);
+    outline: none;
+    background-color: rgba(37, 40, 41, 0.664);
+    color: rgb(126, 210, 244);
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+
+.searchmodal-title input::placeholder{
+    font-size: 15px;
+    text-align: center;
+}
+
+.searchmodal-body{
+    margin: 20px 0px 0px 20px;
+}
+
+.searchmodal-body .container-item{
+    height: max-content;
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-left: 15px;
+    font-family: 'Acme', sans-serif;
+}
+
+.searchmodal-body .card-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(37, 40, 41, 0.664);
+    width: 330px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+    color: rgb(126, 210, 244);
+    border: 1px solid rgb(126, 210, 244);
+    cursor: pointer;
+}
+
+.card-item img{
+    border-radius: 10px 0px 0px 10px ;
+    width: 40px;
+    height: 40px;
+}
+
+.container-item::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.search-notfound{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(126, 210, 244);
 }

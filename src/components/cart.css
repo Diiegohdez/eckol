@@ -33,6 +33,10 @@
     margin-left: 8px;
 }
 
+.cart-item::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
 .cart-item .cartitem-name{
     margin-left: 112px;
     margin-top: -110px;
