@@ -3,7 +3,7 @@
 .contact-container{
     background-color: #212f3d;
     width: 100%;
-    height: 100vh;
+    height: 94vh;
     display: flex;
     flex-direction: column;
 }
@@ -119,4 +119,77 @@
     margin: 0px 10px ;
     color: rgb(126, 210, 244);
     cursor: pointer;
+}
+
+@media screen and (max-width: 412px){
+    .contact-container{
+        width: 100%;
+        height: 105vh;
+    }
+    
+    .contact{
+        width: 23rem;
+        height: 150px;
+        margin-left: 12px;
+        margin-top: 90px;
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    
+    .contact h1{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .contact h3{
+        font-size: 15px;
+        width:250px;
+        height:100px;
+        word-wrap: break-word;
+        margin-left: 50px;
+    }
+
+    .contact2{
+        width: 23rem;
+        height: 500px;
+        margin-left: 12px;
+        display: grid;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact2 .form-contact{
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .contact2 .form-contact input{
+        width: 300px;
+        margin-left: 30px;
+    }
+
+    .contact2 .form-contact textarea{
+        width: 300px;
+        margin-left: 30px;
+        height: 60px;
+    }
+
+    .contact2 .form-contact button{
+        margin-left: 110px;
+    }
+
+    .contact-logo img{
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 90px;
+    }
+
+    .contact-logo .contact-ico{
+        margin-left: 100px;
+    }
+
+
 }

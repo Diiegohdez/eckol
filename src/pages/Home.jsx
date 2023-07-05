@@ -47,8 +47,6 @@ const Home = () => {
           {newDatos2.map(item => (
             <div key={item._id} className="slider-item">
               <img src={item.banner} alt='img' className="banner-img" onClick={() => { setOpenModal(true); setItemProduc(item) }} />
-              <div className='slider-infor'>
-              </div>
             </div>
           ))}
         </Slider>
@@ -64,6 +62,9 @@ const Home = () => {
             </div>
           ))}
         </Slider>
+        <div className='img-promotion'>
+          <img src="https://i.ibb.co/0ZDsHq0/descuentos.png" alt='img'/>
+        </div>
       </div>
     </div>
   );

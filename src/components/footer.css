@@ -19,3 +19,17 @@
     color: rgb(126, 210, 244);
     text-shadow: 2px 2px 3px black; 
 }
+
+@media screen and (max-width: 412px) {    
+    .footer-container{
+        width: 22rem;
+        margin-left: 20px;
+        margin-top: -44px;
+    }
+
+    .footer-container h4{
+        font-size: 8px;
+        display: flex;
+        margin-left: 19px;
+    }
+}

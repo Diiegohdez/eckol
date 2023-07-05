@@ -2,7 +2,7 @@
 .product{
     background-color: #212f3d;
     width: 100%;
-    height: 275vh;
+    height: 268vh;
     display: flex;
     flex-direction: column;
     
@@ -84,4 +84,34 @@
     font-size: 15px;
     transition: all 500ms ease-in-out;
     cursor: pointer;
+}
+
+@media screen and (max-width: 412px){
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-item img{
+        width: 90%;
+        height: 210px;
+    }
+
+    .product-item{
+        width: 170px;
+        height: 255px;
+        margin-left: 12px;
+    }
+
+    .product-item h3{
+        font-size: 15px;
+    }
+
+    .product-item p{
+        font-size: 15px;
+    }
+
+    .product{
+        height: 285vh;
+    }
 }
