@@ -105,3 +105,29 @@
     font-size: 18px;
     color: rgb(126, 210, 244);
 }
+
+@media screen and (max-width: 412px){
+    .Searchmodal-container{
+        width: 320px;
+        height: 450px;
+        margin-top: -160px;
+    }
+
+    .searchmodal-title{
+        margin-top: 25px;
+    }
+
+    .searchmodal-body{
+        margin: 20px 0px 0px 12px;
+    }
+
+    .searchmodal-body .container-item{
+        overflow-y: auto;
+        height: max-content;
+        max-height: 38vh;
+    }
+
+    .searchmodal-body .card-item{
+        width: 270px;
+    }
+}
