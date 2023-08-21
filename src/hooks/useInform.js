@@ -9,7 +9,7 @@ export const useInform = () => {
         getDatos();
     },[])
     const getDatos = async () =>{
-        await Api.get('https://backend-eckol.onrender.com/api/product')
+        await Api.get('https://store-backend-nmescxshh-diiegohdez.vercel.app/api/product')
         .then(Response=>{
             setDatos(Response.data);
         }).catch(error=>{
